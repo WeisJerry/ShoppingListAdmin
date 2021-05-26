@@ -7,6 +7,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -94,6 +95,10 @@ public class DBConnectionInfo {
 	public String getPassword() {
 		return password;
 	}
+	
+	public String getConfigFileName() {
+		return CONFIG_FILE;
+	}
 
 	/**
 	 * Retrieve the connection string to use, baed on these settings.
@@ -155,18 +160,29 @@ public class DBConnectionInfo {
 		connection.appendChild(userElement);
 
 		// write the content into xml file
-		TransformerFactory transformerFactory = TransformerFactory.newInstance();
-		Transformer transformer = transformerFactory.newTransformer();
+		
 		DOMSource source = new DOMSource(doc);
-		StreamResult result = new StreamResult(new File(CONFIG_FILE));
+		StreamResult result = new StreamResult(getConfigFileName());
 
-		transformer.transform(source, result);
+		getTransformer().transform(source, result);
 		saved = true;
 		
 		} catch (Exception e) {
 			//don't do anything; handled by return
 		}
 		return saved;
+	}
+	
+	/**
+	 * Helper method to retrieve transformer to use.
+	 * 
+	 * @return transformer
+	 * @throws TransformerConfigurationException
+	 */
+	protected Transformer getTransformer() throws TransformerConfigurationException {
+		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+		Transformer transformer = transformerFactory.newTransformer();
+		return transformer;
 	}
 	
 	/**
