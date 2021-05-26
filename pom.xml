@@ -8,10 +8,57 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Shopping List</name>
 	<description>Shopping List Admin Tool</description>
-
+	
+	<build>
+     <plugins>
+      <plugin>
+       <groupId>org.codehaus.mojo</groupId>
+       <artifactId>exec-maven-plugin</artifactId>
+       <version>1.1.1</version>
+       <executions>
+        <execution>
+         <phase>test</phase>
+         <goals>
+          <goal>java</goal>
+         </goals>
+         <configuration>
+          <mainClass>shoppinglist.ShoppingListApp</mainClass>
+          <arguments>
+         
+          </arguments>
+         </configuration>
+        </execution>
+       </executions>
+      </plugin>
+     </plugins>
+    </build>
+	
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
-
+	<dependencies>
+		<dependency>
+			<groupId>jaxb-api-2.2.3</groupId>
+			<artifactId>jaxb-api-2.2.3</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>${basedir}\lib\jaxb-api-2.2.3.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>miglayout-4.0-swing</groupId>
+			<artifactId>miglayout-4.0-swing</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>${basedir}\lib\miglayout-4.0-swing.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>postgresql-42.2.14</groupId>
+			<artifactId>postgresql-42.2.14</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>${basedir}\lib\postgresql-42.2.14.jar</systemPath>
+		</dependency>
+		
+	</dependencies>
 </project>

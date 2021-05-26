@@ -1,0 +1,1 @@
+package shoppinglist.ui.manager;
