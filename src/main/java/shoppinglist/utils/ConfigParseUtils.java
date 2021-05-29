@@ -149,7 +149,9 @@ public class ConfigParseUtils {
 
 					if (inclass) {
 						String buffer = new String(ch, start, length);
-						configs.add(buffer);
+						if (!buffer.equals("\n")) {
+							configs.add(buffer);
+						}
 					}
 
 				}
@@ -157,7 +159,7 @@ public class ConfigParseUtils {
 			});
 
 		} catch (Exception e) {
-			// do nothing
+			//do nothing
 		}
 
 		return configs;

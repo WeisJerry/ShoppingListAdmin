@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Configurations>
+<Categories>
+<Category>Dairy0</Category>
+<Category>Dairy1</Category>
+<Category>Dairy2</Category>
+<Category>Dairy3</Category>
+<Category>Dairy4</Category>
+</Categories>
+<Groceries>
+<Grocery>Ketchup</Grocery>
+<Grocery>Apples</Grocery>
+<Grocery>Bananas</Grocery>
+<Grocery>Hot dogs</Grocery>
+<Grocery>Hammer</Grocery>
+<Grocery>Nails</Grocery>
+<Grocery>Milk</Grocery>
+<Grocery>Cottage cheese</Grocery>
+</Groceries>
+</Configurations>
