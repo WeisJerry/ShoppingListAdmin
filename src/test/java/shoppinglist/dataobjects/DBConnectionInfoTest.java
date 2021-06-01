@@ -58,9 +58,9 @@ class DBConnectionInfoTest {
 	void testRestoreOldSettings() {
 		PartialMockDBConnectionInfo info = new PartialMockDBConnectionInfo();
 		info.setConfigFileName("src/test/resources/restoredSettingsTest.xml");
-		info.restoreOldSettings();
+		info.restoreOldSettings(); 
 		
-		String expected = "jdbc:postgresql://host:port/dbname?user=user&password=password&sslmode=require";
+		String expected = "jdbc:postgresql://myhost:1111/mydbname?user=myuser&password=mypwd&sslmode=require";
 		String result = info.getConnectionString();
 		assertEquals(expected, result);
 

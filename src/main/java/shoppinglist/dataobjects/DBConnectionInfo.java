@@ -195,7 +195,7 @@ public class DBConnectionInfo {
 		try {
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
-			saxParser.parse(CONFIG_FILE, new DefaultHandler() {
+			saxParser.parse(getConfigFileName(), new DefaultHandler() {
 				
 				boolean inPort = false;
 				boolean inUser = false;
