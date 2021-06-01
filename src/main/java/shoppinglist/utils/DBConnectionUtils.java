@@ -316,7 +316,7 @@ public class DBConnectionUtils {
 
 		} catch (Exception e) {
 			String errMsg = "An error occurred while updating the database for " + template;
-			JOptionPane.showMessageDialog(null, errMsg, "Open template file failure", JOptionPane.ERROR_MESSAGE);
+			showDBError(errMsg);
 		}
 		return ok;
 	}
@@ -349,10 +349,9 @@ public class DBConnectionUtils {
 			buffer.append(info.getName().toLowerCase());
 			buffer.append("';");
 			executeUpdate(buffer.toString());
-			
 			success = true;
 		} catch (SQLException e) {
-			showDBError("An error occurred while trying to remove a user to the Database.");
+			showDBError("An error occurred while trying to remove a user from the Database.");
 		}
 		return success;
 	}

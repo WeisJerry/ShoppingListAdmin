@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><configurations><dbconnectionsettings><host>host</host><dbname>dbname</dbname><pwd>password</pwd><port>port</port><user>user</user></dbconnectionsettings></configurations>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><configurations><dbconnectionsettings><host>ec2-52-44-166-58.compute-1.amazonaws.com</host><dbname>dfbv5jqkhc63ic</dbname><pwd>2a346ff4e0189453531ed9f99080bcc5e75046b981e3028dd8bbd416d11e8e25</pwd><port>5432</port><user>saztkiisrdxsfl</user></dbconnectionsettings></configurations>
