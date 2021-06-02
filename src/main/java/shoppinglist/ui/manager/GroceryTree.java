@@ -61,7 +61,7 @@ public class GroceryTree extends JTree implements PropertyChangeListener {
 			DefaultTreeModel treeModel = (DefaultTreeModel) model;
 			DefaultMutableTreeNode root = new DefaultMutableTreeNode("");
 			treeModel.setRoot(root);
-			setModel(treeModel);
+			setModel(treeModel); 
 		}
 	}
 	

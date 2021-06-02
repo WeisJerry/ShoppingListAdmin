@@ -9,7 +9,7 @@ import javax.crypto.spec.SecretKeySpec;
 /**
  * Utilities for handling encryption.
  * 
- * @author weis_
+ * @author weis_ 
  *
  */
 public class EncryptionUtils {

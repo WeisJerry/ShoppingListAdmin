@@ -29,7 +29,7 @@ public class TemplateParseUtils {
 
 	public static final String CATEGORY = "category";
 	public static final String GROCERY = "grocery";
-	public static final String NAME = "name";
+	public static final String NAME = "name"; 
 	
 	private static TemplateParseUtils TEMPLATEPARSEUTILS = new TemplateParseUtils();
 
