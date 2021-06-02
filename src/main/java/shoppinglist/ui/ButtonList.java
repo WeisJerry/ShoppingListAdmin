@@ -54,8 +54,7 @@ abstract public class ButtonList extends JPanel {
 		buttonsToDisplay = buttons;
 		this.title = title;
 		initializeUI();
-		addListeners();
-		
+		addListeners(); 
 	}
 	
 	// Handler methods to be instantiated by child classes

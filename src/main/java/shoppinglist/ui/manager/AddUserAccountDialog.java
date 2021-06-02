@@ -106,8 +106,7 @@ public class AddUserAccountDialog extends JDialog {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				TemplatePreviewDialog dialog = new TemplatePreviewDialog(parent,templateField.getText().trim());
-				
+				new TemplatePreviewDialog(parent,templateField.getText().trim());
 			}
 			
 		});

@@ -23,7 +23,7 @@ import java.io.Serializable;
 	abstract public void setName(String name);
 	
 	
-	
+	//for drag n drop purposes
 	public static DataFlavor FLAVOR = new DataFlavor(ShoppingListObject.class,"ShoppingListObject");
 
 	public DataFlavor getDataFlavor() {

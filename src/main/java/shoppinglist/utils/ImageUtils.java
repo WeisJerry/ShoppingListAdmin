@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 import shoppinglist.ShoppingListApp;
 
 /**
+ * Utilities for retrieving icons and images
  * @author weis_
  *
  */

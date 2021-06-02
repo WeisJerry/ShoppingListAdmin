@@ -29,6 +29,13 @@ public class Category extends ShoppingListObject {
 		return categoryName;
 	}
 	
+	/**
+	 * compare categories by categoryname. If 
+	 * category names match, they are equal.
+	 * param: obj to compare
+	 * 
+	 * return: true if match
+	 */
 	public boolean equals(Object obj) {
 		boolean same = false;
 		if (obj instanceof Category) {

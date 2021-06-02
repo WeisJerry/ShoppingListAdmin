@@ -117,6 +117,10 @@ public class ShoppingListMainFrame extends JFrame implements PropertyChangeListe
 		});
 	}
 
+	/**
+	 * Retrieve the image icon to use
+	 * @return Image
+	 */
 	protected Image getImage() {
 		Image image = null;
 		String ico = "shoppinglist.png";

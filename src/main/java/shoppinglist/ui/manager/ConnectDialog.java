@@ -153,6 +153,9 @@ public class ConnectDialog extends JDialog {
 		return errMsg.isEmpty();
 	}
 
+	/**
+	 * Retrieve and display the old settings for a dbconnection.
+	 */
 	protected void getOldSettings() {
 		DBConnectionInfo info = new DBConnectionInfo();
 		if (info.restoreOldSettings()) {

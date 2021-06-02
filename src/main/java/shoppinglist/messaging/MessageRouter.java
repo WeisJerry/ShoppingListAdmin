@@ -42,7 +42,7 @@ public class MessageRouter {
 	
 	/**
 	 * Retrieve the one-and-only instance
-	 * @return
+	 * @return instance of messagerouter
 	 */
 	public static MessageRouter getInstance() {
 		return MESSAGEROUTER;

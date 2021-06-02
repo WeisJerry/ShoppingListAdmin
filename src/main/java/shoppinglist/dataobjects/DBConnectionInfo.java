@@ -1,7 +1,5 @@
 package shoppinglist.dataobjects;
 
-import java.io.File;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.SAXParser;
@@ -255,6 +253,6 @@ public class DBConnectionInfo {
 			//do nothing
 		}
 		
-		return written;
+		return written; 
 	}
 }

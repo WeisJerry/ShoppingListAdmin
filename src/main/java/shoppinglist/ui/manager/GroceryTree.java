@@ -78,12 +78,15 @@ public class GroceryTree extends JTree implements PropertyChangeListener {
 			for (int i = 0; i < getRowCount(); i++) {
 				   expandRow(i);
 				}
-			
-			
 		}
 		
 	}
 	
+	/**
+	 * Populate a tree with all the categories for a user from the DB
+	 * @param root to populate
+	 * @param info userinfo
+	 */
 	protected void populateCategories(DefaultMutableTreeNode root, UserInfo info) {
 		ResultSet results = DBConnectionUtils.getInstance().getUserCategories(info);
 		if (results != null) {
@@ -104,6 +107,11 @@ public class GroceryTree extends JTree implements PropertyChangeListener {
 		}
 	}
 	
+	/**
+	 * Retrieve groceries for a category from the DB and populate the tree with them.
+	 * @param root treenode to populate
+	 * @param category the groceries should belong to.
+	 */
 	protected void populateGroceries(DefaultMutableTreeNode root, Category category) {
 		ResultSet results = DBConnectionUtils.getInstance().getUserGroceries(category);
 		if (results != null) {

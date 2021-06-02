@@ -21,6 +21,12 @@ import shoppinglist.dataobjects.DBConnectionInfo;
 import shoppinglist.dataobjects.Grocery;
 import shoppinglist.dataobjects.UserInfo;
 
+/**
+ * Utilities to get information from and update the DB.
+ * @author weis_
+ *
+ */
+
 public class DBConnectionUtils {
 
 	private static final String USERS_QUERY = "SELECT * FROM USERS;";
@@ -106,6 +112,12 @@ public class DBConnectionUtils {
 		return result;
 	}
 
+	/**
+	 * Execute an update
+	 * 
+	 * @param query
+	 * @throws SQLException
+	 */
 	public void executeUpdate(String query) throws SQLException {
 		Connection connection = getConnection();
 		Statement statement = connection.createStatement();
@@ -138,6 +150,11 @@ public class DBConnectionUtils {
 		return result;
 	}
 
+	/**
+	 * Add a new user to the DB
+	 * @param info
+	 * @return
+	 */
 	public boolean addUser(UserInfo info) {
 		boolean success = false;
 		try {
@@ -248,6 +265,16 @@ public class DBConnectionUtils {
 		return id;
 	}
 	
+	/**
+	 * Create a new selection for a grocery (a selection is when a user
+	 * includes a grocery in their list)
+	 * 
+	 * @param groceryId
+	 * @param categoryId
+	 * @param userName
+	 * 
+	 * @return true if successful
+	 */
 	protected boolean createSelection(int groceryId, int categoryId, String userName) {
 		boolean success = false;
 		try {
@@ -271,7 +298,12 @@ public class DBConnectionUtils {
 		return success;
 	}
 	
-	
+	/**
+	 * Add a template for a grocery list for a user.
+	 * @param template
+	 * @param userName
+	 * @return
+	 */
 	public boolean addUserTemplate(String template, String userName) {
 		boolean ok = true;
 		try {
@@ -321,6 +353,12 @@ public class DBConnectionUtils {
 		return ok;
 	}
 
+	/**
+	 * Remove a user from the DB.
+	 * 
+	 * @param info
+	 * @return true on success
+	 */
 	public boolean removeUser(UserInfo info) {
 		boolean success = false;
 		try {
@@ -356,6 +394,11 @@ public class DBConnectionUtils {
 		return success;
 	}
 
+	/**
+	 * Get categories for a user
+	 * @param info
+	 * @return
+	 */
 	public ResultSet getUserCategories(UserInfo info) {
 		ResultSet result = null;
 		try {
@@ -371,6 +414,11 @@ public class DBConnectionUtils {
 		return result;
 	}
 	
+	/**
+	 * Get groceries for a user
+	 * @param category
+	 * @return
+	 */
 	public ResultSet getUserGroceries(Category category) {
 		ResultSet result = null;
 		try {
@@ -388,6 +436,11 @@ public class DBConnectionUtils {
 		return result;
 	}
 	
+	/**
+	 * Get the qty of groceries for a user.
+	 * @param grocery
+	 * @return
+	 */
 	public int getUserGroceriesQuantity(Grocery grocery) {
 		int quantity = 0;
 		try {

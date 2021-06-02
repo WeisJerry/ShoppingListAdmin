@@ -28,6 +28,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import shoppinglist.dataobjects.ShoppingListObject;
 
 /**
+ * Utils to help parse and read config files.
  * @author weis_
  *
  */
@@ -119,6 +120,13 @@ public class ConfigParseUtils {
 		return name;
 	}
 
+	/**
+	 * Restore configuration settings from a file name
+	 * 
+	 * @param className
+	 * @param fileName to read
+	 * @return list of strings holding the configurations
+	 */
 	public List<String> restoreXmlConfigSettings(String className, String fileName) {
 		final String classNameString = className;
 		final List<String> configs = new ArrayList<String>();

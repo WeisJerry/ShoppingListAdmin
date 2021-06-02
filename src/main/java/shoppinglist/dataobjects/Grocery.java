@@ -35,6 +35,10 @@ public class Grocery extends ShoppingListObject {
     	this.quantity = quantity;
     }
     
+    /**
+     * Display the name and quantity for this grocery.
+     * return: string to display.
+     */
     public String toString() { 
     	String buffer = groceryName;
     	if (quantity > 0) {
@@ -50,6 +54,11 @@ public class Grocery extends ShoppingListObject {
 		return groceryName;
 	}
 
+	/**
+	 * If the grocery names are the same, then the objects are equal.
+	 * param: obj to compare
+	 * return: true if they are equal
+	 */
 	public boolean equals(Object obj) {
 		boolean same = false;
 		if (obj instanceof Grocery) {

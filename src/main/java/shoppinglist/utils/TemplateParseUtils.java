@@ -1,7 +1,6 @@
 package shoppinglist.utils;
 
 import java.io.File;
-import java.io.IOException;
 
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -20,11 +19,17 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 import shoppinglist.dataobjects.Category;
 import shoppinglist.dataobjects.Grocery;
 
+/**
+ * Utilities to assist in parsing and saving templates.
+ * (Templates are precreated shopping lists that can be applied to a user)
+ * 
+ * @author weis_
+ *
+ */
 public class TemplateParseUtils {
 
 	public static final String CATEGORY = "category";
@@ -36,10 +41,21 @@ public class TemplateParseUtils {
 	protected TemplateParseUtils() {
 	}
 
+	/**
+	 * Get the one-and-only instance
+	 * @return
+	 */
 	public static TemplateParseUtils getInstance() {
 		return TEMPLATEPARSEUTILS;
 	}
 
+	/**
+	 * Save the specified treemodel as a template.
+	 * 
+	 * @param model
+	 * @param templateName filename for template
+	 * @return true on success
+	 */
 	public boolean saveModel(DefaultTreeModel model, String templateName) {
 		boolean success = false;
 		if (!templateName.isEmpty()) {

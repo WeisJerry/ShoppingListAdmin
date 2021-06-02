@@ -24,14 +24,26 @@ public class TemplateSelectionUtils {
 	
 	protected TemplateSelectionUtils() { }
 	
+	/**
+	 * Retrieve the one-and-only instance.
+	 * 
+	 * @return
+	 */
 	public static TemplateSelectionUtils getInstance() {
-		return TEMPLATESELECTIONUTILS;		
+		return TEMPLATESELECTIONUTILS; 		
 	}
 	
 	public String selectTemplate(TemplateStatus mode, Component component) {
 		return selectTemplate(mode, component, null);
 	}
 	
+	/**
+	 * Provide a dialog to help user select a template to use.
+	 * @param mode
+	 * @param component
+	 * @param title
+	 * @return
+	 */
 	public String selectTemplate(TemplateStatus mode, Component component, String title) {
 		String templateName = "";
 		JFileChooser fileChooser = new JFileChooser();
